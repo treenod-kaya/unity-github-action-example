@@ -40,7 +40,7 @@ jobs:
           targetPlatform: WebGL
           unityVersion: ${{ env.UNITY_VERSION }}
           # adding allowDirtyBuild here fixed it for me!
-          allowDirtyBuild: true
+          # allowDirtyBuild: true
 
       # Output
       - uses: actions/upload-artifact@v2
