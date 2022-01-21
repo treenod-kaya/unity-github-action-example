@@ -27,7 +27,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          githubToken: ${{ secrets.GIT_PRIVATE_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
       - name: Build project
