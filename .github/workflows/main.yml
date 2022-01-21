@@ -16,13 +16,13 @@ jobs:
           lfs: true
 
       # Cache
-      - uses: actions/cache@v2
-        with:
-          path: Library
-          # key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**') }}
-          restore-keys: |
-            Library-
+#       - uses: actions/cache@v2
+#         with:
+#           path: Library
+#           # key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+#           key: Library-${{ hashFiles('Assets/**', 'Packages/**') }}
+#           restore-keys: |
+#             Library-
 
       # Test
       - name: Run tests
