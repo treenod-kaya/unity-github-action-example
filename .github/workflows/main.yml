@@ -6,6 +6,8 @@ jobs:
   build:
     name: Build my project ✨
     runs-on: ubuntu-latest
+    env:
+      UNITY_VERSION: 2020.3.26f1
     steps:
       # Checkout
       - name: Checkout repository
@@ -36,7 +38,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: WebGL
-          unityVersion: 2020.3.26f1
+          unityVersion: ${{ env.UNITY_VERSION }}
           # adding allowDirtyBuild here fixed it for me!
           allowDirtyBuild: true
 
