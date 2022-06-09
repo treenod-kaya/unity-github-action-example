@@ -1,6 +1,6 @@
 ---
 id: iynzs
-name: 샘플2 코드 설명 입니다.
+name: Sample2 코드 설명 입니다.
 file_version: 1.0.2
 app_version: 0.8.8-2
 file_blobs:
@@ -11,7 +11,7 @@ Swimm 테스트 중입니다.
 
 <br/>
 
-해당 파일은 Start 함수 입니다.
+Start 해당 파일은 Start 함수 입니다.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Sample/Sample2.cs
 ```c#
@@ -30,7 +30,7 @@ Swimm 테스트 중입니다.
 
 <br/>
 
-해당 파일은 update 함수 입니다.
+Update 해당 파일은 update 함수 입니다.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Sample/Sample2.cs
 ```c#
