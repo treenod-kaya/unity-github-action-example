@@ -4,21 +4,27 @@ name: sample
 file_version: 1.0.2
 app_version: 0.8.8-2
 file_blobs:
-  Assets/Sample/Sample.cs: 809bf3eed25b97895dd63fa46cd3c97aeed47536
+  .github/workflows/activation.yml: dcfb90cd6cd2808fee4bd034bc086aecf02845aa
 ---
 
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
-### 📄 Assets/Sample/Sample.cs
-```c#
-⬜ 3      
-⬜ 4      public class Sample : MonoBehaviour
-⬜ 5      {
-🟩 6          private void Start()
-🟩 7          {
-🟩 8              int sum = RuntimeExample.Sum(1, 2);
-⬜ 9              Debug.Log(sum);
-⬜ 10         }
-⬜ 11     }
+### 📄 .github/workflows/activation.yml
+```yaml
+⬜ 6          name: Request manual activation file 🔑
+⬜ 7          runs-on: ubuntu-latest
+⬜ 8          steps:
+🟩 9            # Request manual activation file
+🟩 10           - name: Request manual activation file
+🟩 11             id: getManualLicenseFile
+🟩 12             uses: game-ci/unity-request-activation-file@v2
+🟩 13             with: 
+🟩 14               unityVersion: 2020.3.26f1
+🟩 15           # Upload artifact (Unity_v20XX.X.XXXX.alf)
+🟩 16           - name: Expose as artifact
+🟩 17             uses: actions/upload-artifact@v2
+⬜ 18             with:
+⬜ 19               name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+⬜ 20               path: ${{ steps.getManualLicenseFile.outputs.filePath }}
 ```
 
 <br/>
